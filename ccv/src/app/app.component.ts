@@ -6,6 +6,10 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { NewsPage } from '../pages/news/news';
+import { EventsPage } from '../pages/events/events';
+import { RegisterGcPage } from '../pages/register-gc/register-gc';
+import { RegisterVolunteePage } from '../pages/register-volunteer/register-volunteer';
+import { TheChurchPage } from '../pages/the-church/the-church';
 
 @Component({
   templateUrl: 'app.html'
@@ -13,7 +17,7 @@ import { NewsPage } from '../pages/news/news';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = LivePage;
+  rootPage: any = TheChurchPage;
 
   pages: Array<{ title: string, component: any }>;
 
@@ -22,8 +26,12 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
+      { title: 'A Igreja', component: TheChurchPage },
       { title: 'Tv Videira', component: LivePage },
+      { title: 'Cadastro para GC', component: RegisterGcPage },
+      { title: 'Cadastro Voluntários', component: RegisterVolunteePage },
       { title: 'Contato', component: ContactPage },
+      { title: 'Eventos', component: EventsPage },
       { title: 'Localização', component: LocationPage },
       { title: 'Notícias', component: NewsPage },
     ];

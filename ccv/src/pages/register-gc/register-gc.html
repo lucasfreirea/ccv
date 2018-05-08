@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Cadastro Grupo de Crescimento</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label stacked>Nome Completo</ion-label>
+      <ion-input [(ngModel)]="model.nome_completo" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Sexo</ion-label>
+      <ion-select [(ngModel)]="model.sexo">
+        <ion-option value="m">Masculino</ion-option>
+        <ion-option value="f">Feminino</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Data de Nascimento</ion-label>
+      <ion-datetime displayFormat="DD MMM YYYY" [(ngModel)]="model.data_nascimento"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Bairro</ion-label>
+      <ion-input [(ngModel)]="model.bairro" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Estado Cívil</ion-label>
+      <ion-select [(ngModel)]="model.estado_civil">
+        <ion-option value="casado">Casado</ion-option>
+        <ion-option value="solteiro">Solteiro</ion-option>
+        <ion-option value="separado">Separado</ion-option>
+        <ion-option value="viuvo">Viúvo(a)</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Telefone</ion-label>
+      <ion-input [(ngModel)]="model.telefone" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Email</ion-label>
+      <ion-input [(ngModel)]="model.email" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Dia(s) disponível(is)</ion-label>
+      <ion-select [(ngModel)]="model.dias_gc" multiple="true" cancelText="Cancelar" okText="Confirmar!">
+        <ion-option value="segunda">Segunda</ion-option>
+        <ion-option value="terca">Terça</ion-option>
+        <ion-option value="quarta">Quarta</ion-option>
+        <ion-option value="quinta">Quinta</ion-option>
+        <ion-option value="sexta">Sexta</ion-option>
+        <ion-option value="sabado">Sábado</ion-option>
+        <ion-option value="domingo">Domingo</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Qual grupo de crescimento</ion-label>
+      <ion-select [(ngModel)]="model.grupo_crescimento" cancelText="Cancelar" okText="Confirmar!">
+        <ion-option value="kids">KIDS (Connect | 8 a 11)</ion-option>
+        <ion-option value="jr">A13 Jr (12 a 14 anos)</ion-option>
+        <ion-option value="school">A13 School (15 a 17 anos)</ion-option>
+        <ion-option value="uni">A13 Universitários (18 a 30 anos)</ion-option>
+        <ion-option value="volt">Volt (Acima de 30 anos)</ion-option>
+        <ion-option value="somosum">Somos Um (Casal)</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+</ion-content>
+<ion-footer>
+  <button ion-button full (click)="alert()">Enviar</button>
+</ion-footer>

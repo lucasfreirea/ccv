@@ -12,6 +12,10 @@ import { MyApp } from './app.component';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { EventsPage } from '../pages/events/events';
+import { RegisterGcPage } from '../pages/register-gc/register-gc';
+import { RegisterVolunteePage } from '../pages/register-volunteer/register-volunteer';
+import { TheChurchPage } from '../pages/the-church/the-church';
 
 @NgModule({
   declarations: [
@@ -20,6 +24,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     LocationPage,
     LivePage,
     NewsPage,
+    EventsPage,
+    RegisterGcPage,
+    RegisterVolunteePage,
+    TheChurchPage,
   ],
   imports: [
     BrowserModule,
@@ -32,6 +40,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     LocationPage,
     LivePage,
     NewsPage,
+    EventsPage,
+    RegisterGcPage,
+    RegisterVolunteePage,
+    TheChurchPage,
   ],
   providers: [
     StatusBar,
