@@ -10,6 +10,7 @@ import { EventsPage } from '../pages/events/events';
 import { RegisterGcPage } from '../pages/register-gc/register-gc';
 import { RegisterVolunteePage } from '../pages/register-volunteer/register-volunteer';
 import { TheChurchPage } from '../pages/the-church/the-church';
+import { BibleReadingsPage } from '../pages/bible-readings/bible-readings';
 
 @Component({
   templateUrl: 'app.html'
@@ -27,13 +28,14 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'A Igreja', component: TheChurchPage },
-      { title: 'Tv Videira', component: LivePage },
       { title: 'Cadastro para GC', component: RegisterGcPage },
       { title: 'Cadastro Voluntários', component: RegisterVolunteePage },
       { title: 'Contato', component: ContactPage },
       { title: 'Eventos', component: EventsPage },
+      { title: 'Leituras Biblícas', component: BibleReadingsPage },
       { title: 'Localização', component: LocationPage },
       { title: 'Notícias', component: NewsPage },
+      { title: 'Tv Videira', component: LivePage },
     ];
 
   }

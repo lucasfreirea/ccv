@@ -16,6 +16,8 @@ import { EventsPage } from '../pages/events/events';
 import { RegisterGcPage } from '../pages/register-gc/register-gc';
 import { RegisterVolunteePage } from '../pages/register-volunteer/register-volunteer';
 import { TheChurchPage } from '../pages/the-church/the-church';
+import { BibleReadingsPage } from '../pages/bible-readings/bible-readings';
+import { BibleReadingsDetailPage } from '../pages/bible-readings/bible-readings-detail/bible-readings-detail';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { TheChurchPage } from '../pages/the-church/the-church';
     RegisterGcPage,
     RegisterVolunteePage,
     TheChurchPage,
+    BibleReadingsPage,
+    BibleReadingsDetailPage,
   ],
   imports: [
     BrowserModule,
@@ -44,6 +48,8 @@ import { TheChurchPage } from '../pages/the-church/the-church';
     RegisterGcPage,
     RegisterVolunteePage,
     TheChurchPage,
+    BibleReadingsPage,
+    BibleReadingsDetailPage,
   ],
   providers: [
     StatusBar,
