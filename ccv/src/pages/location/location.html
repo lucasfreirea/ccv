@@ -8,6 +8,33 @@
 </ion-header>
 
 <ion-content padding>
-  <h2>Videira Centro</h2>
-  <div #map id="map"></div>
+  <ion-list style="text-align: center;">
+    <img src="assets/imgs/videira_sul_image.png" />
+    <h2>Videira Sul</h2>
+    <h6>Domingo - 9h | 11h | 16h | 18h | 20h</h6>
+    <h6>Quarta - 19:30</h6>
+    <button ion-button clear small color="primary" icon-start (click)="IrVideiraSul()">
+      Ir até lá
+    </button>
+    <br>
+    <br>
+    <br>
+    <img src="assets/imgs/videira_centro_image.png" />
+    <h2>Videira Centro</h2>
+    <h6>Domingo - 10h | 16h | 18h | 20h</h6>
+    <h6>Quarta - 19:30</h6>
+    <button ion-button clear small color="primary" icon-start (click)="IrVideiraCentro()">
+      Ir até lá
+    </button>
+    <br>
+    <br>
+    <br>
+    <img src="assets/imgs/videira_natal_image.png" />
+    <h2>Videira Natal</h2>
+    <h6>Domingo - 17h</h6>
+    <h6>Quarta - 19:30</h6>
+    <button ion-button clear small color="primary" icon-start (click)="IrVideiraNatal()">
+      Ir até lá
+    </button>
+  </ion-list>
 </ion-content>

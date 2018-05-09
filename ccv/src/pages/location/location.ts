@@ -10,6 +10,8 @@ import {
     Marker,
     MyLocation
 } from '@ionic-native/google-maps';
+import { LaunchNavigator, LaunchNavigatorOptions } from '@ionic-native/launch-navigator';
+import { Geolocation } from '@ionic-native/geolocation';
 
 @Component({
     selector: 'page-location',
@@ -20,43 +22,43 @@ export class LocationPage {
 
     map: GoogleMap;
 
-    constructor(public navCtrl: NavController) {
+    constructor(public navCtrl: NavController, private launchNavigator: LaunchNavigator, private geolocation: Geolocation) {
     }
 
-    ionViewDidLoad() {
-        this.loadMap();
-    }
-    loadMap() {
-
-        let mapOptions: GoogleMapOptions = {
-            camera: {
-                target: {
-                    lat: -3.7321572,
-                    lng: -38.5221987
-                },
-                zoom: 17.61,
-                tilt: 30
-            }
-        };
-
-        this.map = GoogleMaps.create(this.mapRef.nativeElement, mapOptions);
-
-        // Wait the MAP_READY before using any methods.
-        this.map.one(GoogleMapsEvent.MAP_READY)
-            .then(() => {
-                console.log('Map is ready!');
-
-                // Now you can use all methods safely.
-                this.map.addMarker({
-                    title: 'Videira Centro',
-                    icon: 'blue',
-                    animation: 'DROP',
-                    position: {
-                        lat: -3.7321572,
-                        lng: -38.5221987
-                    }
-                })
+    IrVideiraSul() {
+        this.geolocation.getCurrentPosition().then((resp) => {
+            var app = this.launchNavigator.APP.USER_SELECT;
+            this.launchNavigator.navigate([-3.80210705, -38.4768581], {
+                start: [resp.coords.latitude, resp.coords.longitude],
+                app: app
             });
+        }).catch((error) => {
+            console.log('Error getting location', error);
+        });
+    }
+
+    IrVideiraCentro() {
+        this.geolocation.getCurrentPosition().then((resp) => {
+            var app = this.launchNavigator.APP.USER_SELECT;
+            this.launchNavigator.navigate([-3.7321572, -38.5221987], {
+                start: [resp.coords.latitude, resp.coords.longitude],
+                app: app
+            });
+        }).catch((error) => {
+            console.log('Error getting location', error);
+        });
+    }
+
+    IrVideiraNatal() {
+        this.geolocation.getCurrentPosition().then((resp) => {
+            var app = this.launchNavigator.APP.USER_SELECT;
+            this.launchNavigator.navigate([-5.77237326, -35.26114937], {
+                start: [resp.coords.latitude, resp.coords.longitude],
+                app: app
+            });
+        }).catch((error) => {
+            console.log('Error getting location', error);
+        });
     }
 
 }

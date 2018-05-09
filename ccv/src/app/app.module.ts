@@ -18,6 +18,8 @@ import { RegisterVolunteePage } from '../pages/register-volunteer/register-volun
 import { TheChurchPage } from '../pages/the-church/the-church';
 import { BibleReadingsPage } from '../pages/bible-readings/bible-readings';
 import { BibleReadingsDetailPage } from '../pages/bible-readings/bible-readings-detail/bible-readings-detail';
+import { LaunchNavigator } from '@ionic-native/launch-navigator';
+import { Geolocation } from '@ionic-native/geolocation';
 
 @NgModule({
   declarations: [
@@ -55,6 +57,8 @@ import { BibleReadingsDetailPage } from '../pages/bible-readings/bible-readings-
     StatusBar,
     SplashScreen,
     EmailComposer,
+    LaunchNavigator,
+    Geolocation,
     GoogleMaps,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
